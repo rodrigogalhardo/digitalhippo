@@ -53,7 +53,7 @@ jobs:
       - name: 🔐 Gera o arquivo .env
         run: |
           echo "NEXT_PUBLIC_SERVER_URL=http://localhost:3000" >> .env
-          echo "MONGODB_URI=mongodb://mongo:mongo@localhost:27017/" >> .env
+          echo "MONGODB_URL=mongodb://mongo:mongo@localhost:27017/" >> .env
           echo "PAYLOAD_SECRET=${{ secrets.PAYLOAD_SECRET }}" >> .env
           echo "STRIPE_SECRET_KEY=${{ secrets.STRIPE_SECRET_KEY }}" >> .env
           echo "STRIPE_WEBHOOK_SECRET=${{ secrets.STRIPE_WEBHOOK_SECRET }}" >> .env
