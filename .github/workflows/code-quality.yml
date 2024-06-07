@@ -29,7 +29,7 @@ jobs:
           WORKSPACE: https://github.com/${{ github.repository }}/blob/${{ github.sha }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: 🆙 Upload resultado do Shift Left Security
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: shift-left-security
           path: reports
@@ -75,3 +75,4 @@ jobs:
           target: http://localhost:3000
           rules_file_name: .zap/rules.tsv
           cmd_options: -a -z "-config view.locale=pt_BR"
+          allow_issue_writing: false
