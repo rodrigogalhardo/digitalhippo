@@ -16,7 +16,7 @@ jobs:
       - name: 📦 Checkout
         uses: actions/checkout@v4
       - name: 📦 Setup do Node.js
-        run: actions/setup-node@v4
+        uses: actions/setup-node@v4
       - name: 📦 Setup do Yarn
         run: npm install -g yarn
       - name: 📦 Instalar dependências
@@ -40,7 +40,7 @@ jobs:
       - name: 📦 Checkout
         uses: actions/checkout@v4
       - name: 📦 Setup do Node.js
-        run: actions/setup-node@v4
+        uses: actions/setup-node@v4
       - name: 📦 Setup do Yarn
         run: npm install -g yarn
       - name: 📦 Instalar dependências
