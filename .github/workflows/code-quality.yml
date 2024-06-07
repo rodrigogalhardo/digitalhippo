@@ -43,6 +43,11 @@ jobs:
         uses: actions/setup-node@v4
       - name: 📦 Setup do Yarn
         run: npm install -g yarn
+      - name: 📦 Setup do Docker
+        uses: docker-practice/actions-setup-docker@master
+        timeout-minutes: 12
+      - name: 🐋 Rodar Docker Compose
+        run: docker-compose -f docker-compose.yml up -d
       - name: 📦 Instalar dependências
         run: yarn install
       - name: 🔐 Gera o arquivo .env
